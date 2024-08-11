@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    color: #fff;
+}
+
+:root {
+    --brand: #000000;
+    --pbg: #f6f6f6;
+    --sbg: #ffffff;
+    --ptxt: #0d0a15;
+    --stxt: #626262;
+    --success: #1a8e51;
+    --error: #f44336;
+    --warning: #ff9800;
+    --brand-grad: linear-gradient(
+        141deg,
+        #18181f 0%,
+        #10101a 25%,
+        #26344b 50%,
+        #1e1d2a 75%,
+        #18181f 100%
+    );
+    --btn-grad: linear-gradient(#d5e3ff 0%, #33feea 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+p,
+span,
+i,
+a,
+button {
+    font-size: 16px;
+}
+
+body {
+    background: #000000;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.round {
+    border-radius: 50px !important;
+    height: 30px !important;
+    width: 30px !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-btn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    color: #24163f;
+    i {
+        color: #24163f;
+    }
+    font-weight: 500;
+    background: var(--btn-grad);
+    cursor: pointer;
+    box-shadow: 0px 5px 20px #bcdcff63;
+}
+
+.pbtn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: #191e25;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px #2854974f;
+    border: 1px solid #474747;
+}
+
+.nilbtn {
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    background: #006aff94;
+    cursor: pointer;
+    box-shadow: 0px 5px 20px #2854974f;
+    border: 2px solid #0066ff;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--brand-grad);
+    width: 90%;
+    border-radius: 15px;
+    border: 1px solid #26344b;
+    #menu {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        a {
+            color: #fff;
+        }
+    }
+    #mobmenubtn {
+        display: none;
+    }
+    #mobmenu {
+        display: none;
+    }
+    .action {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+#banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+    .inner {
+        .bnraction {
+            display: flex;
+            gap: 20px;
+        }
+        h1 {
+            font-weight: 400;
+            font-size: 3.75rem;
+            background: -webkit-linear-gradient(
+                45deg,
+                #00e5ff,
+                #b6f5ff,
+                #ae00ff,
+                #ff5757
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 50px;
+        }
+        p {
+            font-weight: 300;
+            font-size: 16px;
+            width: 600px;
+        }
+    }
+}
+
+#courses {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 50px 20px;
+    .coursecards {
+        background: #191e25;
+        padding: 20px;
+        border: 1px solid #26344b;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 250px;
+        height: 350px;
+        img {
+            width: 100px;
+        }
+
+        a {
+            color: #0088ff;
+        }
+    }
+}
+
+#signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        background: var(--brand-grad);
+        padding: 40px;
+        border: 1px solid #26344b;
+        border-radius: 20px;
+        width: 80%;
+        input {
+            background: #000;
+            width: 70%;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #26344b;
+            &:focus {
+                outline: 1px solid #0088ff80;
+                border: 1px solid #0088ff;
+            }
+        }
+
+        button {
+            width: 70%;
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    p,
+    span,
+    a,
+    i,
+    button {
+        font-size: 14px;
+    }
+    button {
+        padding: 10px 20px !important;
+    }
+    header {
+        padding: 10px;
+        #header {
+            padding: 8px 15px;
+            flex-direction: column;
+            align-items: flex-start;
+            #logo {
+                img {
+                    width: 100px;
+                }
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 10px 0;
+            }
+            #menu {
+                display: none;
+            }
+
+            #mobmenubtn {
+                display: flex;
+            }
+
+            #mobmenu {
+                display: none;
+                flex-direction: column;
+                gap: 10px;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    #banner {
+        flex-direction: column;
+        gap: 20px;
+        .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                width: 100%;
+            }
+            text-align: center;
+            .bnraction {
+                width: 90%;
+                flex-direction: column;
+                button {
+                    width: 100%;
+                }
+            }
+        }
+
+        .bnrimg {
+            img {
+                width: 300px;
+            }
+        }
+    }
+
+    #courses {
+        flex-direction: column;
+        gap: 20px;
+        .coursecards {
+            width: 100%;
+        }
+    }
+
+    #signup {
+        flex-direction: column;
+        .form {
+            width: 100%;
+            padding: 40px 10px;
+            input {
+                width: 100%;
+                padding: 10px;
+            }
+
+            button {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+}

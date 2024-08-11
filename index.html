@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./static/main.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <header>
+            <div id="header">
+                <div id="logo">
+                    <a href="/">
+                        <img src="/static/logo.svg" alt="logo" />
+                    </a>
+                    <button
+                        onclick="toggleMobMenu()"
+                        id="mobmenubtn"
+                        class="brand-btn round"
+                    >
+                        <i class="fa-solid fa-ellipsis" style="color: #000"></i>
+                    </button>
+                </div>
+                <menu id="menu">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <a href="/">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#signup"
+                        ><button class="brand-btn">Sign Up</button></a
+                    >
+                </menu>
+                <div id="mobmenu">
+                    <a href="/">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#signup"
+                        ><button class="brand-btn">Sign Up</button></a
+                    >
+                </div>
+            </div>
+            <script>
+                function toggleMobMenu() {
+                    $("#mobmenu").toggle(300).css({
+                        display: "flex",
+                    });
+                }
+            </script>
+        </header>
+        <section id="banner">
+            <div class="inner">
+                <h1>Code is Kool</h1>
+                <h2>অথবা, কোড ইস্কুল</h2>
+                <br />
+                <p>
+                    Here you can learn mordern technologies like Python, SQL,
+                    Machine Learning, Deep Learning, Git, etc.
+                    <i>সবকিছু তোমার বাংলা ভাষাতেই।</i>
+                </p>
+                <br />
+                <div class="bnraction">
+                    <a href="#signup">
+                        <button class="brand-btn">
+                            Get Started&nbsp;
+                            <i class="fa-regular fa-paper-plane"></i></button
+                    ></a>
+                    <a href="#courses" href="">
+                        <button class="pbtn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            &nbsp; Explore our courses
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="bnrimg">
+                <img src="/static/banner.svg" alt="" />
+            </div>
+        </section>
+        <br />
+        <br />
+        <br />
+        <h1 style="text-align: center">Our Courses</h1>
+        <section id="courses">
+            <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="coursecards"
+            >
+                <img src="/static/py.svg" alt="" />
+                <h3>Python</h3>
+                <p>
+                    You will learn aboutBasics of python, Data types, Exception
+                    handling, Object and classes, File handling etc.
+                    <!-- <a href="">Know More</a> -->
+                </p>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                class="coursecards"
+            >
+                <img src="/static/tf.svg" alt="" />
+                <h3>ML and DL</h3>
+                <p>
+                    Here you can learn about Machine Learning, Deep Learning,
+                    Regressions, Classification, Neural Networks etc.
+                    <!-- <a href="">Know More</a> -->
+                </p>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                class="coursecards"
+            >
+                <img src="/static/db.svg" alt="" />
+                <h3>Data Handling</h3>
+                <p>
+                    You will learn about Data Handling, SQL (PostgreSQL/Sqlite),
+                    NoSQL, Pandas, Polars etc.
+                    <!-- <a href="">Know More</a> -->
+                </p>
+            </div>
+            <div
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                class="coursecards"
+            >
+                <img src="/static/fa.svg" alt="" />
+                <h3>Python Backend</h3>
+                <p>
+                    Here you can create Backend, APIs and deploy your machine
+                    learning models with python and FastAPI.
+                    <!-- <a href="">Know More</a> -->
+                </p>
+            </div>
+        </section>
+        <section id="signup">
+            <div class="form">
+                <h1 style="text-align: center">Get Started</h1>
+                <input type="text" placeholder="Your name" />
+                <input type="text" placeholder="Your email" />
+                <input type="text" placeholder="Your phone number" />
+                <input type="text" placeholder="Name of your institution" />
+                <input type="text" placeholder="Current Education" />
+                <button class="nilbtn">Get Started</button>
+            </div>
+        </section>
+        <br />
+        <br />
+        <br />
+        <footer
+            style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #191e25;
+                color: #fff;
+                padding: 10px;
+            "
+        >
+            <p>&copy; 2022 Codeiskool. All rights reserved</p>
+        </footer>
+    </body>
+    <script>
+        AOS.init();
+    </script>
+</html>
