@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
+        <title>Codeiskool</title>
         <link rel="stylesheet" href="./static/main.css" />
         <script
             src="https://code.jquery.com/jquery-3.5.1.js"
@@ -28,7 +28,7 @@
             <div id="header">
                 <div id="logo">
                     <a href="/">
-                        <img src="/static/logo.svg" alt="logo" />
+                        <img src="./static/logo.svg" alt="logo" />
                     </a>
                     <button
                         onclick="toggleMobMenu()"
@@ -68,7 +68,7 @@
                 <h2>অথবা, কোড ইস্কুল</h2>
                 <br />
                 <p>
-                    Here you can learn mordern technologies like Python, SQL,
+                    Here you can learn modern technologies like Python, SQL,
                     Machine Learning, Deep Learning, Git, etc.
                     <i>সবকিছু তোমার বাংলা ভাষাতেই।</i>
                 </p>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="bnrimg">
-                <img src="/static/banner.svg" alt="" />
+                <img src="./static/banner.svg" alt="" />
             </div>
         </section>
         <br />
@@ -101,7 +101,7 @@
                 data-aos-duration="2000"
                 class="coursecards"
             >
-                <img src="/static/py.svg" alt="" />
+                <img src="./static/py.svg" alt="" />
                 <h3>Python</h3>
                 <p>
                     You will learn aboutBasics of python, Data types, Exception
@@ -114,7 +114,7 @@
                 data-aos-duration="1000"
                 class="coursecards"
             >
-                <img src="/static/tf.svg" alt="" />
+                <img src="./static/tf.svg" alt="" />
                 <h3>ML and DL</h3>
                 <p>
                     Here you can learn about Machine Learning, Deep Learning,
@@ -127,7 +127,7 @@
                 data-aos-duration="1000"
                 class="coursecards"
             >
-                <img src="/static/db.svg" alt="" />
+                <img src="./static/db.svg" alt="" />
                 <h3>Data Handling</h3>
                 <p>
                     You will learn about Data Handling, SQL (PostgreSQL/Sqlite),
@@ -140,7 +140,7 @@
                 data-aos-duration="2000"
                 class="coursecards"
             >
-                <img src="/static/fa.svg" alt="" />
+                <img src="./static/fa.svg" alt="" />
                 <h3>Python Backend</h3>
                 <p>
                     Here you can create Backend, APIs and deploy your machine
@@ -152,12 +152,43 @@
         <section id="signup">
             <div class="form">
                 <h1 style="text-align: center">Get Started</h1>
-                <input type="text" placeholder="Your name" />
-                <input type="text" placeholder="Your email" />
-                <input type="text" placeholder="Your phone number" />
-                <input type="text" placeholder="Name of your institution" />
-                <input type="text" placeholder="Current Education" />
-                <button class="nilbtn">Get Started</button>
+                <input
+                    class="inp"
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                />
+                <input
+                    class="inp"
+                    id="email"
+                    type="text"
+                    placeholder="Your email"
+                />
+                <input
+                    class="inp"
+                    id="phone"
+                    type="text"
+                    placeholder="Your phone number"
+                />
+                <input
+                    class="inp"
+                    id="institution"
+                    type="text"
+                    placeholder="Name of your institution"
+                />
+                <select
+                    class="inp"
+                    id="education"
+                    placeholder="Current Education"
+                >
+                    <option value="B.Tech">B.Tech</option>
+                    <option value="B.Sc.">B.Sc.</option>
+                    <option value="BCA">BCA</option>
+                    <option value="M.Tech">M.Tech</option>
+                    <option value="M.Sc.">M.Sc.</option>
+                    <option value="MCA">MCA</option>
+                </select>
+                <button id="gsBtn" class="nilbtn">Get Started</button>
             </div>
         </section>
         <br />
@@ -178,5 +209,44 @@
     </body>
     <script>
         AOS.init();
+    </script>
+    <script>
+        $(document).ready(function () {
+            let inps = {};
+
+            if (!inps.name && !inps.email && !inps.phone && !inps.institution) {
+                $("#gsBtn").css({
+                    opacity: "0.5",
+                    cursor: "not-allowed",
+                });
+            }
+
+            $(".inp").each(function () {
+                $(this).on("input", function () {
+                    inps[$(this).attr("id")] = $(this).val();
+                    if (
+                        inps.email &&
+                        inps.name &&
+                        inps.phone &&
+                        inps.institution
+                    ) {
+                        $("#gsBtn").css({
+                            opacity: "1",
+                            cursor: "pointer",
+                        });
+                    } else {
+                        $("#gsBtn").css({
+                            opacity: "0.5",
+                            cursor: "not-allowed",
+                        });
+                    }
+                });
+            });
+
+            $("#gsBtn").on("click", function () {
+                window.location.href =
+                    "https://chat.whatsapp.com/HdxyLrWwyBr8WN3xl99YL0";
+            });
+        });
     </script>
 </html>

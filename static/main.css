@@ -220,6 +220,18 @@ header {
             }
         }
 
+        select {
+            background: #000;
+            width: 70%;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #26344b;
+            &:focus {
+                outline: 1px solid #0088ff80;
+                border: 1px solid #0088ff;
+            }
+        }
+
         button {
             width: 70%;
             padding: 20px;
@@ -321,6 +333,11 @@ header {
             width: 100%;
             padding: 40px 10px;
             input {
+                width: 100%;
+                padding: 10px;
+            }
+
+            select {
                 width: 100%;
                 padding: 10px;
             }
